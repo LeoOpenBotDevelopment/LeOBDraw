@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Draw</title>
+  <style>
+    body{
+      background-color: #fff;
+    }
+    #blue-color {
+      color: blue;
+      background-color: blue;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #red-color {
+      color: red;
+      background-color: red;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #black-color {
+      color: black;
+      background-color: black;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #green-color {
+      color: green;
+      background-color: green;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Dcyan-color {
+      color: darkcyan;
+      background-color: darkcyan;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Dblue-color {
+      color: darkblue;
+      background-color: darkblue;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Dgreen-color {
+      color: darkgreen;
+      background-color: darkgreen;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Lcyan-color {
+      color: lightcyan;
+      background-color: lightcyan;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Lblue-color {
+      color: lightblue;
+      background-color: lightblue;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Lgreen-color {
+      color: lightgreen;
+      background-color: lightgreen;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Pink-color {
+      color: pink;
+      background-color: pink;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #yellow-color {
+      color: yellow;
+      background-color: yellow;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #grey-color {
+      color: grey;
+      background-color: grey;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Dgrey-color {
+      color: darkgrey;
+      background-color: darkgrey;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #Lgrey-color {
+      color: lightgrey;
+      background-color: lightgrey;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    #EB {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #EB:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    #Uploadbtn {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #Uploadbtn:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    #TextB {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #TextB:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    #Löschen {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #Löschen:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    #pencil-button {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #pencil-button:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    #ColorPiker {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #ColorPiker:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    #ClearImage {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #ClearImage:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    #Savebtn {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #Savebtn:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    #save-button {
+      display: none;
+    }
+    #import-button {
+      display: none;
+    }
+
+    .option-button {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .row {
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+    #save-button{
+      border: 1px solid cyan;
+      border-radius: 10px;
+      color: black;
+      background-color: cyan;
+    }
+    #import-button{
+      color: black;
+      background-color: cyan;
+    }
+    #sizeSlider {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    #sizeRange {
+      width: 100%;
+    }
+
+    #sizeIndicator {
+      width: 20px;
+      height: 20px;
+      background-color: #000;
+      border-radius: 50%;
+      position: relative;
+      top: -10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="color: white;" id="größe">4</h1>
+  <div class="row">
+    <div style="padding-left: 1px;">
+      <!-- Buttons für Werkzeuge und Farben -->
+      <img src="PencilLogo1.png" id="pencil-button" class="option-button"></img>
+      <div id="sizeSlider">
+        <input type="range" min="1" max="50" value="10" id="sizeRange"><br><br>
+        <div id="sizeIndicator"></div>
+      </div>
+      <img id="EB" src="EraserLogo1.png" class="option-button"></img>
+      <img src="TrashCanLogo2.png" id="Löschen" class="option-button"></img>
+      <img id="ClearImage" class="option-button" src="ClearImageLogo.png"></img>
+      <img src="TextLogo1.png" id="TextB" class="option-button"></img>
+      <label for="import-button"><img src="UploadLogo1.png" class="option-button" id="Uploadbtn"></img></label>
+      <label for="save-button"><img src="DownloadLogo1.png" class="option-button" id="Savebtn"></img></label>
+      <img src="ColorLogo1.png" id="ColorPiker" class="option-button"></img>
+      <!-- Farben -->
+      <button id="black-color" class="option-button">0</button>
+      <button id="red-color" class="option-button">0</button>
+      <button id="green-color" class="option-button">0</button>
+      <button id="blue-color" class="option-button">0</button>
+      <button id="Dcyan-color" class="option-button">0</button>
+      <button id="Dblue-color" class="option-button">0</button>
+      <button id="Dgreen-color" class="option-button">0</button>
+      <button id="Lcyan-color" class="option-button">0</button>
+      <button id="Lblue-color" class="option-button">0</button>
+      <button id="Lgreen-color" class="option-button">0</button>
+      <button id="Pink-color" class="option-button">0</button>
+      <button id="yellow-color" class="option-button">0</button>
+      <button id="grey-color" class="option-button">0</button>
+      <button id="Dgrey-color" class="option-button">0</button>
+      <button id="Lgrey-color" class="option-button">0</button>
+      <!-- Neue Funktionen -->
+
+    </div>
+    <div style="display: flex; flex-direction: column; padding-left: 30px; padding-top: 1px;">
+      <!-- Canvas bleibt unverändert -->
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+  <div>
+    <button id="save-button" class="option-button">Speichern</button>
+    <input type="file" id="import-button" class="option-button" accept="image/*">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const canvas = document.getElementById("canvas");
+        const context = canvas.getContext("2d");
+
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight; // Anpassung der Höhe für das iPad
+
+        canvas.width = screenWidth - 50;
+        canvas.height = screenHeight - 80;
+        canvas.style.border = "5px solid black";
+        canvas.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
+        canvas.style.borderRadius = "10px";
+        canvas.style.cursor = "crosshair";
+
+        let isDrawing = false;
+        let isErasing = false;
+        let isTyping = false;
+        let inputField;
+        let strokeColor = "#000";
+
+        canvas.addEventListener("touchstart", startDrawing);
+        canvas.addEventListener("touchend", stopDrawing);
+        canvas.addEventListener("touchmove", draw);
+        const ClearImage = document.getElementById("ClearImage");
+        ClearImage.addEventListener("click", clearImage);
+
+        const pencilButton = document.getElementById("pencil-button");
+        pencilButton.addEventListener("click", () => {
+            isErasing = false;
+            isTyping = false;
+            canvas.style.cursor = "crosshair";
+        });
+
+        const eraserButton = document.getElementById("EB");
+        eraserButton.addEventListener("click", () => {
+            isErasing = true;
+            isTyping = false;
+            canvas.style.cursor = "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICA8cGF0aCBkPSJNMiA3LjMzOEwxMiA2LjMzOEwxMiA5LjMzOEwyIDkuMzM4TDEuNzM4IDQuMzM4TDIgNC4zMzhMMCA3LjMzOEwyIDguMzM4TDEyIDcuMzM4TDguMzM4IDQuMzM4TDEyIDguMzM4TDAgNy4zMzh6IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+Cg==') 6 6, auto";
+        });
+        const clearButton = document.getElementById("Löschen");
+
+        clearButton.addEventListener("click", function() {
+            clearCanvas();
+            animation();
+        });
+
+        function animation() {
+            document.getElementById('Löschen').src = "TrashCanLogo1.png";
+            setTimeout(() => {
+                document.getElementById('Löschen').src = "TrashCanLogo2.png";
+            }, 1000);
+        }
+
+        const textButton = document.getElementById("TextB");
+        textButton.addEventListener("click", () => {
+            isTyping = true;
+            isErasing = false;
+            canvas.style.cursor = "text";
+            canvas.removeEventListener("touchstart", startDrawing);
+            canvas.removeEventListener("touchmove", draw);
+            canvas.addEventListener("click", placeTextInput);
+        });
+
+        const blackColorButton = document.getElementById("black-color");
+        blackColorButton.addEventListener("click", () => {
+            strokeColor = "#000";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+
+        const redColorButton = document.getElementById("red-color");
+        redColorButton.addEventListener("click", () => {
+            strokeColor = "#FF0000";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const greenColorButton = document.getElementById("green-color");
+        greenColorButton.addEventListener("click", () => {
+            strokeColor = "green";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const blueColorButton = document.getElementById("blue-color");
+        blueColorButton.addEventListener("click", () => {
+            strokeColor = "blue";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const DcyanColorButton = document.getElementById("Dcyan-color");
+        DcyanColorButton.addEventListener("click", () => {
+            strokeColor = "darkcyan";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const DblueColorButton = document.getElementById("Dblue-color");
+        DblueColorButton.addEventListener("click", () => {
+            strokeColor = "darkblue";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const DgreenColorButton = document.getElementById("Dgreen-color");
+        DgreenColorButton.addEventListener("click", () => {
+            strokeColor = "darkgreen";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const LcyanColorButton = document.getElementById("Lcyan-color");
+        LcyanColorButton.addEventListener("click", () => {
+            strokeColor = "lightcyan";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const LblueColorButton = document.getElementById("Lblue-color");
+        LblueColorButton.addEventListener("click", () => {
+            strokeColor = "lightblue";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const LgreenColorButton = document.getElementById("Lgreen-color");
+        LgreenColorButton.addEventListener("click", () => {
+            strokeColor = "lightgreen";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const pinkColorButton = document.getElementById("Pink-color");
+        pinkColorButton.addEventListener("click", () => {
+            strokeColor = "pink";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const yellowColorButton = document.getElementById("yellow-color");
+        yellowColorButton.addEventListener("click", () => {
+            strokeColor = "yellow";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const greyColorButton = document.getElementById("grey-color");
+        greyColorButton.addEventListener("click", () => {
+            strokeColor = "grey";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const LgreyColorButton = document.getElementById("Lgrey-color");
+        LgreyColorButton.addEventListener("click", () => {
+            strokeColor = "lightgrey";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const DgreyColorButton = document.getElementById("Dgrey-color");
+        DgreyColorButton.addEventListener("click", () => {
+            strokeColor = "darkgrey";
+            if (!isErasing) {
+                canvas.style.cursor = "crosshair";
+            }
+        });
+        const ColorPiker = document.getElementById("ColorPiker");
+        ColorPiker.addEventListener("click", () => {
+          if(blackColorButton.style.display == "none"){
+            blackColorButton.style.display = "block";
+            redColorButton.style.display = "block";
+            greenColorButton.style.display = "block";
+            blueColorButton.style.display = "block";
+            DcyanColorButton.style.display = "block";
+            DblueColorButton.style.display = "block";
+            DgreenColorButton.style.display = "block";
+            LcyanColorButton.style.display = "block";
+            LblueColorButton.style.display = "block";
+            LgreenColorButton.style.display = "block";
+            pinkColorButton.style.display = "block";
+            yellowColorButton.style.display = "block";
+            greyColorButton.style.display = "block";
+            LgreyColorButton.style.display = "block";
+            DgreyColorButton.style.display = "block";
+          }else{
+            blackColorButton.style.display = "none";
+            redColorButton.style.display = "none";
+            greenColorButton.style.display = "none";
+            blueColorButton.style.display = "none";
+            DcyanColorButton.style.display = "none";
+            DblueColorButton.style.display = "none";
+            DgreenColorButton.style.display = "none";
+            LcyanColorButton.style.display = "none";
+            LblueColorButton.style.display = "none";
+            LgreenColorButton.style.display = "none";
+            pinkColorButton.style.display = "none";
+            yellowColorButton.style.display = "none";
+            greyColorButton.style.display = "none";
+            LgreyColorButton.style.display = "none";
+            DgreyColorButton.style.display = "none";
+          }
+        });
+        const sizeBar = document.getElementById("sizeRange");
+        const sizeIndicator = document.getElementById("sizeIndicator");
+        const size = document.getElementById("größe");
+
+        sizeBar.addEventListener("input", () => {
+            size.textContent = sizeBar.value; // Aktualisiere den Wert von 'größe' entsprechend dem Wert der Leiste
+            updateSizeIndicator();
+        });
+
+        function updateSizeIndicator() {
+            const newSize = parseInt(size.textContent); // Hole den Wert von 'größe' und konvertiere ihn in eine Zahl
+            sizeIndicator.style.width = newSize + "px";
+            sizeIndicator.style.height = newSize + "px";
+            sizeIndicator.style.marginLeft = -newSize / 2 + "px";
+            sizeIndicator.style.marginTop = -newSize / 2 + "px";
+        }
+
+        /*try2*/
+        const saveButton = document.getElementById("save-button");
+        saveButton.id = "save-button";
+        saveButton.addEventListener("click", () => {
+            const image = canvas.toDataURL();
+            const link = document.createElement("a");
+            link.href = image;
+            link.download = "canvas_image.png";
+            link.click();
+        });
+
+        const importButton = document.getElementById("import-button");
+        importButton.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                const img = new Image();
+                img.onload = function () {
+                    canvas.style.backgroundImage = `url(${img.src})`;
+                    canvas.style.backgroundRepeat = "no-repeat";
+                    canvas.style.backgroundSize = "contain";
+                    isDrawingEnabled = true; // Hier wird das Ziehen wieder aktiviert
+                    dragAndDropCanvas();
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        let isDrawingEnabled = true;
+
+        function dragAndDropCanvas() {
+            let offsetX = 0;
+            let offsetY = 0;
+            let isDragging = false;
+
+            canvas.addEventListener("mousedown", startDrag);
+            canvas.addEventListener("mousemove", dragCanvas);
+            canvas.addEventListener("mouseup", endDrag);
+            canvas.addEventListener("mouseleave", endDrag);
+            canvas.addEventListener("touchstart", startDrag);
+            canvas.addEventListener("touchmove", dragCanvas);
+            canvas.addEventListener("touchend", endDrag);
+            canvas.addEventListener("touchcancel", endDrag);
+
+            function startDrag(event) {
+                if (event.type === "mousedown" && event.button !== 0) return; // Ignore right-clicks
+                if (!isDrawingEnabled) return; // Ignore if drawing is not enabled
+                isDragging = true;
+                const rect = canvas.getBoundingClientRect();
+                const clientX = event.type === "mousedown" ? event.clientX : event.touches[0].clientX;
+                const clientY = event.type === "mousedown" ? event.clientY : event.touches[0].clientY;
+                offsetX = clientX - rect.left;
+                offsetY = clientY - rect.top;
+                isDrawingEnabled = false; // Disable drawing while dragging
+            }
+
+            function dragCanvas(event) {
+                if (isDragging) {
+                    isDrawing = false
+                    event.preventDefault();
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = event.type === "mousemove" ? event.clientX : event.touches[0].clientX;
+                    const clientY = event.type === "mousemove" ? event.clientY : event.touches[0].clientY;
+                    const newX = clientX - offsetX;
+                    const newY = clientY - offsetY;
+                    canvas.style.backgroundPosition = `${newX}px ${newY}px`;
+                }
+            }
+            function endDrag() {
+                isDragging = false;
+                isDrawing = false;
+                
+                // Re-enable drawing after dragging
+            }
+        }
+        function drawMoveableCircle3() {
+            const circleRadius = 30; // Radius des Kreises
+            const circleColor = "red"; // Farbe des Kreises
+
+            let isDragging = false;
+            let isPlaced = false; // Gibt an, ob der Kreis bereits platziert wurde
+            let offsetX = 0;
+            let offsetY = 0;
+            let circleX = canvas.width / 2; // Anfangsposition des Kreises auf der X-Achse
+            let circleY = canvas.height / 2; // Anfangsposition des Kreises auf der Y-Achse
+
+            // Zeichne den Kreis an der Anfangsposition
+            drawCircle(circleX, circleY);
+
+            // Eventlistener für Mausbewegung oder Touchbewegung
+            canvas.addEventListener("mousedown", startDrag);
+            canvas.addEventListener("mousemove", dragCircle);
+            canvas.addEventListener("mouseup", endDrag);
+            canvas.addEventListener("mouseleave", endDrag);
+            canvas.addEventListener("touchstart", startDrag);
+            canvas.addEventListener("touchmove", dragCircle);
+            canvas.addEventListener("touchend", endDrag);
+            canvas.addEventListener("touchcancel", endDrag);
+
+            function drawCircle(x, y) {
+                const context = canvas.getContext("2d");
+                context.beginPath();
+                context.arc(x, y, circleRadius, 0, Math.PI * 2);
+                context.fillStyle = circleColor;
+                context.fill();
+                context.closePath();
+            }
+
+            function startDrag(event) {
+                if (!isPlaced) {
+                    isDragging = true;
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = event.type === "mousedown" ? event.clientX : event.touches[0].clientX;
+                    const clientY = event.type === "mousedown" ? event.clientY : event.touches[0].clientY;
+                    offsetX = clientX - rect.left - circleX; // Berechne den Offset zwischen Mausklick und Kreismittelpunkt
+                    offsetY = clientY - rect.top - circleY; // Berechne den Offset zwischen Mausklick und Kreismittelpunkt
+                }
+            }
+
+            function dragCircle(event) {
+                if (!isPlaced && isDragging) {
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = event.type === "mousemove" ? event.clientX : event.touches[0].clientX;
+                    const clientY = event.type === "mousemove" ? event.clientY : event.touches[0].clientY;
+                    circleX = clientX - rect.left - offsetX; // Aktualisiere die X-Position des Kreises
+                    circleY = clientY - rect.top - offsetY; // Aktualisiere die Y-Position des Kreises
+                    drawCanvas(); // Aktualisiere den gesamten Canvas
+                }
+            }
+
+            function endDrag() {
+                if (!isPlaced) {
+                    isDragging = false;
+                    isPlaced = true; // Setze den Kreis als platziert fest
+                }
+            }
+
+            function drawCanvas() {
+                const context = canvas.getContext("2d");
+                context.clearRect(0, 0, canvas.width, canvas.height); // Lösche den gesamten Canvas
+                drawCircle(circleX, circleY); // Zeichne den Kreis an seiner neuen Position
+                // Hier kannst du weitere Elemente auf dem Canvas zeichnen, falls gewünscht
+            }
+        }
+        function drawMoveableCirclebetter() {
+            const circleRadius = 30; // Radius des Kreises
+            const circleColor = "red"; // Farbe des Kreises
+
+            let isDragging = false;
+            let isPlaced = false; // Gibt an, ob der Kreis bereits platziert wurde
+            let offsetX = 0;
+            let offsetY = 0;
+            let circleX = canvas.width / 2; // Anfangsposition des Kreises auf der X-Achse
+            let circleY = canvas.height / 2; // Anfangsposition des Kreises auf der Y-Achse
+
+            // Zeichne den Canvas-Hintergrund
+            drawCanvasBackground();
+
+            // Zeichne den Kreis an der Anfangsposition
+            drawCircle(circleX, circleY);
+
+            // Eventlistener für Mausbewegung oder Touchbewegung
+            canvas.addEventListener("mousedown", startDrag);
+            canvas.addEventListener("mousemove", dragCircle);
+            canvas.addEventListener("mouseup", endDrag);
+            canvas.addEventListener("mouseleave", endDrag);
+            canvas.addEventListener("touchstart", startDrag);
+            canvas.addEventListener("touchmove", dragCircle);
+            canvas.addEventListener("touchend", endDrag);
+            canvas.addEventListener("touchcancel", endDrag);
+
+            function drawCircle(x, y) {
+                const context = canvas.getContext("2d");
+                context.beginPath();
+                context.arc(x, y, circleRadius, 0, Math.PI * 2);
+                context.fillStyle = circleColor;
+                context.fill();
+                context.closePath();
+            }
+
+            function drawCanvasBackground() {
+                const context = canvas.getContext("2d");
+                // Hier den Hintergrund oder andere Elemente zeichnen
+            }
+
+            function startDrag(event) {
+                if (!isPlaced) {
+                    isDragging = true;
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = event.type === "mousedown" ? event.clientX : event.touches[0].clientX;
+                    const clientY = event.type === "mousedown" ? event.clientY : event.touches[0].clientY;
+                    offsetX = clientX - rect.left - circleX; // Berechne den Offset zwischen Mausklick und Kreismittelpunkt
+                    offsetY = clientY - rect.top - circleY; // Berechne den Offset zwischen Mausklick und Kreismittelpunkt
+                }
+            }
+
+            function dragCircle(event) {
+                if (!isPlaced && isDragging) {
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = event.type === "mousemove" ? event.clientX : event.touches[0].clientX;
+                    const clientY = event.type === "mousemove" ? event.clientY : event.touches[0].clientY;
+                    circleX = clientX - rect.left - offsetX; // Aktualisiere die X-Position des Kreises
+                    circleY = clientY - rect.top - offsetY; // Aktualisiere die Y-Position des Kreises
+                    redrawCanvas(); // Aktualisiere den gesamten Canvas
+                }
+            }
+
+            function endDrag() {
+                if (!isPlaced) {
+                    isDragging = false;
+                    isPlaced = true; // Setze den Kreis als platziert fest
+                }
+            }
+
+            function redrawCanvas() {
+                drawCanvasBackground(); // Zeichne den Canvas-Hintergrund neu
+                drawCircle(circleX, circleY); // Zeichne den Kreis an seiner neuen Position
+                // Hier kannst du weitere Elemente auf dem Canvas zeichnen, falls gewünscht
+            }
+        }
+        function drawMoveableCircle1() {
+            const circleRadius = 30; // Radius des Kreises
+            const circleColor = "red"; // Farbe des Kreises
+
+            let isDragging = false;
+            let isPlaced = false; // Gibt an, ob der Kreis bereits platziert wurde
+            let offsetX = 0;
+            let offsetY = 0;
+            let circleX = canvas.width / 2; // Anfangsposition des Kreises auf der X-Achse
+            let circleY = canvas.height / 2; // Anfangsposition des Kreises auf der Y-Achse
+
+            // Zeichne den Kreis an der Anfangsposition
+            drawCircle(circleX, circleY);
+
+            // Eventlistener für Mausbewegung oder Touchbewegung
+            canvas.addEventListener("mousedown", startDrag);
+            canvas.addEventListener("mousemove", dragCircle);
+            canvas.addEventListener("mouseup", endDrag);
+            canvas.addEventListener("mouseleave", endDrag);
+            canvas.addEventListener("touchstart", startDrag);
+            canvas.addEventListener("touchmove", dragCircle);
+            canvas.addEventListener("touchend", endDrag);
+            canvas.addEventListener("touchcancel", endDrag);
+
+            function drawCircle(x, y) {
+                const context = canvas.getContext("2d");
+                context.beginPath();
+                context.arc(x, y, circleRadius, 0, Math.PI * 2);
+                context.fillStyle = circleColor;
+                context.fill();
+                context.closePath();
+            }
+
+            function startDrag(event) {
+                if (!isPlaced) {
+                    isDragging = true;
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = event.type === "mousedown" ? event.clientX : event.touches[0].clientX;
+                    const clientY = event.type === "mousedown" ? event.clientY : event.touches[0].clientY;
+                    offsetX = clientX - rect.left - circleX; // Berechne den Offset zwischen Mausklick und Kreismittelpunkt
+                    offsetY = clientY - rect.top - circleY; // Berechne den Offset zwischen Mausklick und Kreismittelpunkt
+                }
+            }
+
+            function dragCircle(event) {
+                if (!isPlaced && isDragging) {
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = event.type === "mousemove" ? event.clientX : event.touches[0].clientX;
+                    const clientY = event.type === "mousemove" ? event.clientY : event.touches[0].clientY;
+                    const prevCircleX = circleX;
+                    const prevCircleY = circleY;
+                    circleX = clientX - rect.left - offsetX; // Aktualisiere die X-Position des Kreises
+                    circleY = clientY - rect.top - offsetY; // Aktualisiere die Y-Position des Kreises
+                    drawCanvas(prevCircleX, prevCircleY); // Aktualisiere den gesamten Canvas
+                }
+            }
+
+            function endDrag() {
+                if (!isPlaced) {
+                    isDragging = false;
+                    isPlaced = true; // Setze den Kreis als platziert fest
+                }
+            }
+
+            function drawCanvas(prevX, prevY) {
+                const context = canvas.getContext("2d");
+                context.clearRect(prevX - circleRadius, prevY - circleRadius, circleRadius * 2, circleRadius * 2); // Lösche nur den Bereich, in dem sich der Kreis zuvor befand
+                drawCircle(circleX, circleY); // Zeichne den Kreis an seiner neuen Position
+                // Hier kannst du weitere Elemente auf dem Canvas zeichnen, falls gewünscht
+            }
+        }
+        
+        
+        /*try2*/
+        /**/
+        
+
+        function startDrawing(event) {
+            isDrawing = true;
+            draw(event);
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+            context.beginPath();
+        }
+
+        function draw(event) {
+            event.preventDefault(); // Verhindern des Standardverhaltens für Berührungen
+
+            if (!isDrawing) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const x = event.touches[0].clientX - rect.left; // Berührungsposition ermitteln
+            const y = event.touches[0].clientY - rect.top;
+
+            const lineWidth1 = parseInt(document.getElementById("größe").textContent);
+            
+            context.lineWidth = lineWidth1;
+            context.lineCap = "round";
+
+            if (!isErasing) {
+                context.strokeStyle = strokeColor;
+            } else {
+                context.strokeStyle = "#ffffff";
+            }
+
+            context.lineTo(x, y);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(x, y);
+        }
+
+        function clearCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        function clearImage1() {
+            canvas.style.backgroundImage = "";
+        }
+        function clearImage() {
+            const confirmation = confirm("Möchten Sie ein neues Bild hinzufügen?");
+            if (confirmation) {
+                clearImage1();
+                importButton.click(); // Simuliert einen Klick auf den Import-Button, um ein neues Bild hinzuzufügen
+            }
+        }
+        /* try */
+        function drag(inputField) {
+            let offsetX = 0;
+            let offsetY = 0;
+            let isDragging = false;
+
+            inputField.addEventListener("touchstart", startDrag);
+            inputField.addEventListener("touchmove", dragInput);
+            inputField.addEventListener("touchend", endDrag);
+            inputField.addEventListener("touchcancel", endDrag);
+
+            function startDrag(event) {
+                isDragging = true;
+                const rect = inputField.getBoundingClientRect();
+                const touch = event.touches[0];
+                offsetX = touch.clientX - rect.left;
+                offsetY = touch.clientY - rect.top;
+            }
+
+            function dragInput(event) {
+                if (isDragging) {
+                    const touch = event.touches[0];
+                    const newX = touch.clientX - offsetX;
+                    const newY = touch.clientY - offsetY;
+                    inputField.style.left = newX + "px";
+                    inputField.style.top = newY + "px";
+                }
+            }
+
+            function endDrag() {
+                isDragging = false;
+            }
+        }
+        function placeTextInput(event) {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            inputField = document.createElement("input");
+            inputField.type = "text";
+            inputField.style.position = "absolute";
+            inputField.style.left = x + "px";
+            inputField.style.top = y + "px";
+            inputField.style.width = "100px";
+            inputField.style.fontSize = document.getElementById("größe").textContent + "px";
+            canvas.parentNode.appendChild(inputField);
+            inputField.focus();
+
+            drag(inputField); // Hier wird die drag-Funktion aufgerufen und das inputField übergeben
+
+            inputField.addEventListener("blur", saveTextInput);
+            canvas.removeEventListener("click", placeTextInput);
+        }
+
+        function saveTextInput() {
+            const text = inputField.value;
+            const rect = inputField.getBoundingClientRect();
+            const x = rect.left - canvas.getBoundingClientRect().left;
+            const y = rect.top - canvas.getBoundingClientRect().top;
+            context.font = document.getElementById("größe").textContent + "px Arial";
+            context.fillStyle = strokeColor;
+            context.fillText(text, x, y);
+            canvas.parentNode.removeChild(inputField);
+            isTyping = false;
+            canvas.addEventListener("touchstart", startDrawing);
+            canvas.addEventListener("touchmove", draw);
+        }
+        /* try */
+        
+        canvas.addEventListener("click", function (event) {
+            if (isTyping && inputField) {
+                inputField.blur();
+            }
+        });
+    });
+  </script>
+</body>
+
+</html>
